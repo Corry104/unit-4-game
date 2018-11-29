@@ -17,28 +17,27 @@ function myFunction() {
 
 $("#button-1").on("click", function() {
     userScore += button1;
-    $("#crystalValue").html(button1);
-    $("#totScore").text("#crystalValue" + button1);
-
+    $("#crystalValue").html(button1).hide();
+    $("#userScore").html("Total Score: " + userScore);
 });
 
 $("#button-2").on("click", function() {
     userScore += button2;
-    $("#crystalValue").html(button2);
-    $("#totScore").text("#crystalValue" + button2);
-
+    $("#crystalValue").html(button2).hide();
+    $("#totScore").html("#crystalValue" + button2);
+    $("#userScore").text("Total Score: " + userScore);
 });
 
 $("#button-3").on("click", function() {
     userScore += button3;
-    $("#crystalValue").html(button3);
-
+    $("#crystalValue").html(button3).hide();
+    $("#userScore").text("Total Score: " + userScore);
 });
 
 $("#button-4").on("click", function() {
     userScore += button4;
-    $("#crystalValue").html(button4);
-
+    $("#crystalValue").html(button4).hide();
+    $("#userScore").text("Total Score: " + userScore);
 });
 
 
