@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystals Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body onload="myFunction()">
+
+<div class="mainContainer">
+    <div id="header" class="row">
+        <div class="col-md-12">
+            <h1> Crystals Collector! </h1>
+        </div>
+    </div>
+
+<!-- Game Instructions -->
+<!-- -------------------------------------------------- -->
+    <div id="instructions" class="row">
+        <div class="col-md-12">
+            <p> You will be given a random numebr at the start of the game.</p><br>
+            <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score</p><br>
+            <p> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number</p><br>
+            <p> The value of each crystal is hidden from you until you click on it</p><br>
+            <p> Each time when the game starts, the game will change the value of each crystal</p><br><br><br>
+
+        </div>
+    </div>
+
+    <!-- Match this score and the user will win -->
+    <!-- ------------------------------------------------ -->
+    <div id="targetScore" class="row">
+        <div id="firstCol" class="col-md-4">
+        <span id="targetNumber"></span>
+        </div>
+
+        <!-- Keep track of the user score -->
+        <!-- ----------------------------------------- -->
+        <div id="secondCol" class="col-md-2"><br>
+            <span id="win"> Win:</span> <br><br>
+            <span id="loss"> Loss:</span>
+        </div>
+    </div>
+   
+    <!-- Hit the Crystals to generate new numbers -->
+    <!-- -------------------------------------------------------------- -->
+    <div id="crystals" class="row">
+        <div class="col-md-12">
+            <button id="button-1" class="btn btn-danger btn-choice" value="""></button>
+            <button id="button-2" class="btn btn-danger btn-choice" value=""></button>
+            <button id="button-3" class="btn btn-danger btn-choice" value=""></button>
+            <button id="button-4" class="btn btn-danger btn-choice" value=""></button>
+        </div>
+    </div>
+
+    <!-- Keeps track of the user total score -->
+    <!-- ------------------------------------------------------------------- -->
+    <div id="userScore" class="row">
+        <div class="col-md-5"> Your total score: </div>
+    </div>
+
+<!-- This will show the hidden value, once the user clicks on the crystal  -->
+<!-- ----------------------------------------------------------------------- -->
+    <div id="totValue" class="row">
+        <div class="col-md-5" id="crystalValue"></div>
+    </div>
+</div>
+        
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+</html>
