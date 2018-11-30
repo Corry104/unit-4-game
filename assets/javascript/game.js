@@ -1,12 +1,12 @@
 
 var targetNumber = Math.floor(Math.random()*101) +1;
-var win = 0;
-var loss = 0;
+var win = 0
+var loss = 0
 var button1 = Math.floor(Math.random() *11) +1;
 var button2 = Math.floor(Math.random() *11) +1;
 var button3 = Math.floor(Math.random() *11) +1;
 var button4 = Math.floor(Math.random() *11) +1;
-var userScore = 0;
+var userScore = 0
 
 
 function myFunction() {
@@ -17,16 +17,20 @@ function myFunction() {
 
 function finalCount() {
 
-    if (userScore === targetNumber){
-        $("#win").html(win);
-        wins++;
+    if (userScore === targetNumber) {
+        win++;
+        $("#win").text("Win: " + win);
         alert("You Won!");
+        userScore = 0;
+        myFunction();
     }
     
-    else {
-        $("#loss").html(loss);
+    else if (userScore > targetNumber)  {
         loss++;
+        $("#loss").text("Loss: "  + loss);
         alert("You Lose!");
+        userScore = 0;
+        myFunction();
     }
 }
 
